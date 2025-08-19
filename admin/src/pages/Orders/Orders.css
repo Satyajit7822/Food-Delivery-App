@@ -1,0 +1,68 @@
+.order-item {
+    display: flex; /* Use flexbox for side-by-side alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    font-size: 14px;
+    gap: 20px; /* Adjust gap between elements */
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #bdbdbd;
+    color: #505050;
+}
+
+.order-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.order-item-details {
+    display: flex;
+    flex-direction: column; /* Stack the food name and address vertically */
+    flex-grow: 2; /* Allow this section to grow and take more space */
+}
+
+.order-item-food {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.order-item-address {
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate if the address is too long */
+}
+
+.order-item p, .order-item select {
+    margin: 0; /* Remove unnecessary margins */
+}
+
+.order-item-price, .order-item-count, .order-item-status {
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.order-item select {
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    padding: 10px;
+    outline: none;
+    min-width: 120px;
+}
+
+@media (max-width: 1000px) {
+    .order-item {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+        font-size: 12px;
+    }
+
+    .order-item select {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .order-item img {
+        width: 40px;
+    }
+}
